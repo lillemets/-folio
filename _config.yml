@@ -1,29 +1,35 @@
-# Site settings
-title: *folio
-email: you@example.com
+# site info
+title: lillemets.ee
 description: > # this means to ignore newlines until "baseurl:"
-  A simple, whitespace, helvetica based portfolio theme.
-baseurl:  # the subpath of your site, e.g. /blog/
-url:  # the base hostname & protocol for your site
+  Jüri Lillemets
+timezone: Europe/Tallinn 
+url: www.lillemets.ee 
+baseurl: ""
+
+# author info
+email: jyri.lillemets@emu.ee
 twitter_username: twitter_username
 github_username:  github_username
 
-# Build settings
+# build settings
 markdown: kramdown
-
 highlighter: pygments
+destination: /home/jrl/drop/Dropbox/Apps/Pancake.io/lillemets
+permalink: none
 
-# Pagination
-paginate: 15
+# gems
+gems:
+    - jekyll-paginate
+paginate: 10
 paginate_path: "/blog/page:num/"
 
-
+# menu
 collections:
   portfolio:
     output: true
-    permalink: /portfolio/:path/
+    permalink: /portfolio/:path.html
   poetry:
     output: true
-    permalink: /poetry/:path/
+    permalink: /poetry/:path.html
 
 
