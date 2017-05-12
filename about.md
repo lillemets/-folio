@@ -4,26 +4,35 @@ title: about
 permalink: /about.html
 ---
 
-<img class="col one right" src="/img/prof_pic.jpg">
+<img class="col one right" src="/img/profile.jpg">
 
-<br/>
-Write your biography here. Tell the world about yourself. Link to your favorite <a href="http://reddit.com" target="blank">subreddit</a>. You can put a picture in, too. The code is already in, just name your picture "prof_pic.jpg" and put it in the img folder. 
+# Who?
 
-Link to your social media connections, too. This theme is set up to use <a href="http://fortawesome.github.io/Font-Awesome/" target="blank">Font Awesome icons</a>, like the ones below. Add your facebook, twitter, linkedin, or just disable all of them. 
+I have an [online resume](http://jyri.lillemets.ee). It's in Estonian.
 
+# Why?
+
+Occasionally I have thoughts that I'd like to write down. This is what I do on this site. 
+
+# How?
+
+Witten in [markdown](https://en.wikipedia.org/wiki/Markdown) markup language.  
+Built using [Jekyll](http://jekyllrb.com/) static site generator.  
+Theme is [Folio](https://github.com/bogoli/-folio) for Jekyll. Modified to my liking.  
+Hosted on [Pancake.io](https://www.pancake.io/).
 
 <br/>
 <hr/>
 <br/>
 <span class="contacticon center">
-	<a href="mailto:you@example.com"><i class="fa fa-envelope-square"></i></a>
-	<a href="https://github.com" target="_blank"><i class="fa fa-github-square"></i></a>
-	<a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-	<a href="http://tumblr.com" target="_blank"><i class="fa fa-tumblr-square"></i></a>
-	<a href="https://twitter.com" target="_blank"><i class="fa fa-twitter-square"></i></a>
+	<a href="mailto:jyri.lillemets@emu.ee"><i class="fa fa-envelope-square"></i></a>
+	<a href="https://github.com/lillemets" target="_blank"><i class="fa fa-github-square"></i></a>
+	<a href="https://reddit.com/u/lillemets" target="_blank"><i class="fa fa-reddit-square"></i></a>
+	<a href="https://facebook.com/lillemets" target="_blank"><i class="fa fa-facebook-square"></i></a>
+	<a href="https://flickr.com/lillemets" target="_blank"><i class="fa fa-flickr"></i></a>
 </span>
 
 <div class="col three caption">
-	You can even add a little note about which of these is the best way to reach you.
+    The best way to reach me is by email.
 </div>
 

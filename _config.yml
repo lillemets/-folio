@@ -8,8 +8,7 @@ baseurl: ""
 
 # author info
 email: jyri.lillemets@emu.ee
-twitter_username: twitter_username
-github_username:  github_username
+github_username: lillemets
 
 # build settings
 markdown: kramdown
@@ -25,11 +24,27 @@ paginate_path: "/blog/page:num/"
 
 # menu
 collections:
-  portfolio:
+  projects:
     output: true
-    permalink: /portfolio/:path.html
-  poetry:
+    permalink: /projects/:path.html
+  texts:
     output: true
-    permalink: /poetry/:path.html
+    permalink: /texts/:path.html
 
-
+# defaults
+defaults:
+  -
+    scope:
+      type:         "projects"
+    values:
+      layout:       "post"
+  -
+    scope:
+      type:         "texts"
+    values:
+      layout:       "post"
+  -
+    scope:
+      type:         "posts"
+    values:
+      layout:       "post"
