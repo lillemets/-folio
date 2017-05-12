@@ -26,7 +26,7 @@ $caption_color: #aaa;
 /* COLORS  */
 $red:  #ba6666;
 $orange: #e6bc6b;
-$blue: #7997b6;
+$blue: #5c7a99;
 $green: #99b77f;
 $lime_green: #77aeab;
 $purple: #bb80b0;
@@ -86,6 +86,13 @@ hr{
  */
 figure > img {
     display: block;
+    max-width: 800px
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    text-align: center
 }
 
 figcaption {
