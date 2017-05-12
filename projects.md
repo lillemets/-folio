@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects.html
-description: Here are some projects I've been involved in regarding my work at <a href="http://ms.emu.ee/et/teadusinfo/uuringute-aruanded/" target="_blank">Estonian University of Life Sciences</a>.
+description: These are some projects I've been involved in regarding my work on rural issues. There is currently nothing here but I'll soon write short overviews of the projects.
 ---
 
 {% for project in site.projects %}

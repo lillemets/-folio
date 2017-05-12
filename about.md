@@ -6,19 +6,13 @@ permalink: /about.html
 
 <img class="col one right" src="/img/profile.jpg">
 
-# Who?
+I mainly work as an analyst at [Estonian University of Life Sciences](http://ms.emu.ee/et/uldinfo/struktuur2/maamajanduse-uuringud-ja-analuus/) and am occupied with researching pretty much everything related to rural affairs. I have an [online resume](http://jyri.lillemets.ee). It's in Estonian.
 
-I have an [online resume](http://jyri.lillemets.ee). It's in Estonian.
-
-# Why?
-
-Occasionally I have thoughts that I'd like to write down. This is what I do on this site. 
-
-# How?
+### About this site
 
 Witten in [markdown](https://en.wikipedia.org/wiki/Markdown) markup language.  
 Built using [Jekyll](http://jekyllrb.com/) static site generator.  
-Theme is [Folio](https://github.com/bogoli/-folio) for Jekyll. Modified to my liking.  
+Based on [Folio](https://github.com/bogoli/-folio) theme and modified to my liking.  
 Hosted on [Pancake.io](https://www.pancake.io/).
 
 <br/>
