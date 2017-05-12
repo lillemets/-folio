@@ -9,6 +9,7 @@ baseurl: ""
 # author info
 email: jyri.lillemets@emu.ee
 github_username: lillemets
+disqus_shortname: 'lillemets'
 
 # build settings
 markdown: kramdown
@@ -16,7 +17,7 @@ highlighter: pygments
 destination: /home/jrl/drop/Dropbox/Apps/Pancake.io/lillemets
 permalink: none
 
-# gems
+# addons
 gems:
     - jekyll-paginate
 paginate: 10
