@@ -3,7 +3,7 @@
  * Site header   **********************************************************
  */
 .site-header {
-border-bottom: 1px solid $grey-color-light;
+border-bottom: 1px solid $grey-color-medium;
 background-color: #fff;
 opacity: 0.75;
 position:fixed;
@@ -183,7 +183,7 @@ font-size: 24px;
 letter-spacing: -1px;
 line-height: 1;
 @include media-query($on-laptop) {
-font-size: 16px;
+font-size: 18px;
     }
 }
 

@@ -11,8 +11,10 @@ dl, dd, ol, ul, figure {
 
 
 /** Variables **********************************************/
-$base-font-family:              Helvetica, sans-serif;
+$base-font-family:              Roboto, sans-serif;
+$base-font-size:                18px;
 $base-line-height:              1.5em;
+$base-font-weight:              300;
 $horizontal-spacing-unit:       50px;
 $vertical-spacing-unit:         40px;
 $nav-height:                    56px;
@@ -33,7 +35,8 @@ $purple: #bb80b0;
 
 
 $grey-color-dark: #333;   /* footer */
-$grey-color-light: #ddd;  /* navigation bar border */
+$grey-color-medium: #ddd;  /* navigation bar border */
+$grey-color-light: #eee;
 $text-color:     #666;
 
 /* Set theme color *************************/
@@ -49,7 +52,7 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    font-weight: 100;
+    font-weight: $base-font-weight;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
@@ -121,7 +124,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 100;
+    font-weight: $base-font-weight;
 }
 
 
@@ -144,7 +147,7 @@ a {
 
 article a {
     color: $theme-color;
-    font-weight: 100;
+    font-weight: $base-font-weight;
 
     &:hover {
         text-decoration: none;
@@ -175,7 +178,9 @@ blockquote {
  */
 pre,
 code {
+    font-family: Iosevka;
     font-size: 15px;
+    font-weight: 400;
     border-radius: 3px;
     background-color: $grey-color-light;
 }
@@ -186,7 +191,7 @@ code {
 
 pre {
     padding: 8px 12px;
-    overflow-x: scroll;
+    /*overflow-x: scroll;*/
 
     > code {
         border: 0;
