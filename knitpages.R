@@ -14,7 +14,7 @@ KnitPost <- function(input, outfile, base.url="/") {
   fig.path <- paste0("img/", sub(".Rmd$", "", basename(input)), "/")
   opts_chunk$set(fig.path = fig.path)
   opts_chunk$set(fig.cap = "")
-  render_markdown_github()
+  render_jekyll(highlight = 'pygments')
   knit(input, outfile, envir = parent.frame())
 }
 

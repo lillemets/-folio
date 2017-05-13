@@ -6,13 +6,13 @@ permalink: /about.html
 
 <img class="col one right" src="/img/profile.jpg">
 
-I mainly work as an analyst at [Estonian University of Life Sciences](http://ms.emu.ee/et/uldinfo/struktuur2/maamajanduse-uuringud-ja-analuus/) and am occupied with researching pretty much everything related to rural affairs. I have an [online resume](http://jyri.lillemets.ee). It's in Estonian.
+I mainly work as an analyst at [Estonian University of Life Sciences](http://ms.emu.ee/et/uldinfo/struktuur2/maamajanduse-uuringud-ja-analuus/) and am occupied with researching pretty much everything related to rural life in Estonia. I have an [online resume](http://jyri.lillemets.ee). It's in Estonian.
 
 ### About this site
 
 Witten in [markdown](https://en.wikipedia.org/wiki/Markdown) markup language.  
 Built using [Jekyll](http://jekyllrb.com/) static site generator.  
-Based on [Folio](https://github.com/bogoli/-folio) theme and modified to my liking.  
+Based on the beautiful [Folio](https://github.com/bogoli/-folio) theme.  
 Hosted on [Pancake.io](https://www.pancake.io/).
 
 <br/>
