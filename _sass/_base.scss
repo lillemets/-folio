@@ -2,7 +2,7 @@
  * Reset some basic elements
  */
 body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
+p, a, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
@@ -13,6 +13,7 @@ dl, dd, ol, ul, figure {
 /** Variables **********************************************/
 $base-font-family:              Roboto, sans-serif;
 $base-font-size:                18px;
+$small-font-size:               $base-font-size * 0.875;
 $base-line-height:              1.6em;
 $base-font-weight:              300;
 $horizontal-spacing-unit:       50px;
@@ -26,6 +27,9 @@ $caption_font_size: 12px;
 $caption_color: #aaa;
 
 /* COLORS  */
+$text-color:       #111;
+$background-color: #fdfdfd;
+
 $red:  #ba6666;
 $orange: #e6bc6b;
 $blue: #5c7a99;
@@ -33,7 +37,7 @@ $green: #99b77f;
 $lime_green: #77aeab;
 $purple: #bb80b0;
 
-
+$grey-color:       #828282;
 $grey-color-dark: #333;   /* footer */
 $grey-color-medium: #ddd;  /* navigation bar border */
 $grey-color-light: #eee;
@@ -179,8 +183,8 @@ blockquote {
  */
 pre,
 code {
-    font-family: Iosevka;
-    font-size: 15px;
+    font-family: monospace;
+    font-size: 12px;
     font-weight: 400;
     border-radius: 3px;
     background-color: $grey-color-light;

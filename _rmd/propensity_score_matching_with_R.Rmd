@@ -1,6 +1,7 @@
 ---
 title: "Propensity score matching with R"
-bibliography: "/home/jrl/text/library.bib"
+bibliography: '/home/jrl/text/library.bib'
+description: "A walkthrough on how to carry out PSM analysis in base R."
 ---
 
 ```{r setup, include = F, eval = T}

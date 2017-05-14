@@ -6,20 +6,25 @@
 
 rm(list = ls())
 
-setwd('~/site')
+site.dir <- '/home/jrl/site/' # Absolute path to site directory
+rmd.dir <- '_rmd/' # Relative path to directory containing rmarkdown files
+post.dir <- '_posts/' # Relative path to posts directory
+img.dir <- 'img/' # Relative path to images directory
+
+setwd(site.dir)
 
 KnitPost <- function(input, outfile, base.url="/") {
   require(knitr);
   opts_knit$set(base.url = base.url)
-  fig.path <- paste0("img/", sub(".Rmd$", "", basename(input)), "/")
+  fig.path <- paste0(img.dir, sub(".Rmd$", "", basename(input)), "/")
   opts_chunk$set(fig.path = fig.path)
   opts_chunk$set(fig.cap = "")
   render_jekyll(highlight = 'pygments')
   knit(input, outfile, envir = parent.frame())
 }
 
-for (infile in list.files("_rmd", pattern="*.Rmd", full.names=TRUE)) {
-  outfile = paste0("_posts/", Sys.Date(), "-", sub(".Rmd$", ".md", basename(infile)))
+for (infile in list.files(rmd.dir, pattern="*.Rmd", full.names=TRUE)) {
+  outfile = paste0(post.dir, Sys.Date(), "-", sub(".Rmd$", ".md", basename(infile)))
   
   # knit only if the input file is the last one modified
   if (!file.exists(outfile) | file.info(infile)$mtime > file.info(outfile)$mtime) {
