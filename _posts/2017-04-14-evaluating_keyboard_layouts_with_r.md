@@ -18,7 +18,7 @@ Let's load necessary packages and objects. The latter includes theme and color s
 # Load packages
 library('dplyr'); library('tidyr'); library('ggplot2'); library('extrafont')
 # Load objects
-load('data/rschtheme.Rda'); load('data/funs.Rda')
+load('data/objects/lil_theme.Rda'); load('data/objects/funs.Rda')
 {% endhighlight %}
 
 To begin with, we need to imput some data. [American National Corpus data](http://www.anc.org/data/anc-second-release/) gives us the most common words and their relative frequencies in English. These frequencies are used as the basis for creating a text sample of 100 000 words which will be employed later in the analysis.
@@ -43,17 +43,17 @@ SampleRows(en, 10)
 
 
 {% highlight text %}
-##                      word count         freq
-## 158584              sabel     1 4.511621e-08
-## 162596      blinkenlights     1 4.511621e-08
-## 61344                ural     7 3.158134e-07
-## 16958           unearthed    65 2.932553e-06
-## 184546        dismissable     1 4.511621e-08
-## 144801      multinomially     1 4.511621e-08
-## 195291 buffy-as-commander     1 4.511621e-08
-## 173409       non-recycled     1 4.511621e-08
-## 52398                ncnb     9 4.060459e-07
-## 178945              uplan     1 4.511621e-08
+##                       word count         freq
+## 26915             unsavory    31 1.398602e-06
+## 185176     codefi-nitional     1 4.511621e-08
+## 68544                 daya     5 2.255810e-07
+## 197352          kerouacian     1 4.511621e-08
+## 88590         fluid-filled     3 1.353486e-07
+## 115227 glutathione-coupled     2 9.023241e-08
+## 225198        non-enclosed     1 4.511621e-08
+## 5771               triumph   315 1.421160e-05
+## 24526                  mlb    36 1.624183e-06
+## 156788               cunto     1 4.511621e-08
 {% endhighlight %}
 
 
@@ -65,8 +65,8 @@ head(word.sample, 10)
 
 
 {% highlight text %}
-##  [1] "'ve"       "he"        "a"         "nafta"     "cell"     
-##  [6] "a"         "as"        "something" "was"       "year"
+##  [1] "next"     "makobane" "suggest"  "in"       "can"      "supposed"
+##  [7] "yeltsin"  "correct"  "both"     "chili"
 {% endhighlight %}
 
 For evaluation of the placement of letters, the R's matrix provides an appropriate data format. This does not perfectly reflect the staggered layout of most keyboards, but for the purposes here it's close enough. 
@@ -113,25 +113,25 @@ SampleRows(en.df, 10)
 
 {% highlight text %}
 ##       - ? ' 0 1 2 6 7 9 a b c d e f g h i j k l m n o p q r s t u v w x y
-##  [1,] 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 3 0 0 1 0 1 1 2 0 0 2 1 0 0 0 0 0
-##  [2,] 1 0 0 0 0 0 0 0 0 1 0 0 1 4 1 0 0 1 0 0 3 0 0 0 0 0 1 1 2 0 0 0 0 1
-##  [3,] 1 0 0 0 0 0 0 0 0 1 0 1 1 2 0 0 0 0 0 0 0 0 3 1 0 0 1 0 0 1 0 0 0 0
-##  [4,] 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 1 0 0
-##  [5,] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 2 1 0 0 0 2 0 0 0 0 0 0
-##  [6,] 1 0 0 0 0 0 0 0 0 0 1 1 1 3 0 0 0 1 0 0 1 1 0 0 0 0 3 0 1 1 0 0 0 1
-##  [7,] 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 1 0 0 2 0 0 1 0 0 0 0 0 1 0 0 0 1
-##  [8,] 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 1 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0
-##  [9,] 0 0 0 0 0 0 0 0 0 2 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0 0 1
-## [10,] 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 0 1 1 1 0 0 0 0 0 1 0 0 0 0
+##  [1,] 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 1 1 0 1 1 1 1 0 0 1 0
+##  [2,] 0 0 0 0 0 0 0 0 0 1 0 0 1 2 0 0 2 1 0 0 0 0 0 0 0 0 1 0 1 0 0 1 0 0
+##  [3,] 0 0 0 0 0 0 0 0 0 2 0 0 1 2 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 0 0 1
+##  [4,] 0 0 0 0 0 0 0 0 0 1 0 1 0 1 0 0 1 1 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0
+##  [5,] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 1 0 0 0 0 2 0 0 0 0 0
+##  [6,] 0 0 0 0 0 0 0 0 0 2 1 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0
+##  [7,] 1 0 0 0 0 0 0 0 0 0 0 2 1 4 1 0 0 0 0 0 0 0 1 1 0 0 3 2 0 0 0 0 0 0
+##  [8,] 0 0 0 0 0 0 0 0 0 1 0 1 1 0 0 0 0 2 0 0 0 0 1 1 0 0 0 0 2 0 0 0 0 0
+##  [9,] 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 2 0 0 0 1 0 1 0 0 0 0 0
+## [10,] 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 0 1 0 0 1 1 1 0 0 0 0 0 1 1 0 0 0 0
 ##       z
 ##  [1,] 0
 ##  [2,] 0
-##  [3,] 0
+##  [3,] 1
 ##  [4,] 0
 ##  [5,] 0
-##  [6,] 0
+##  [6,] 1
 ##  [7,] 0
-##  [8,] 2
+##  [8,] 0
 ##  [9,] 0
 ## [10,] 0
 {% endhighlight %}
@@ -151,28 +151,28 @@ SampleRows(en.df, 10)
 
 
 {% highlight text %}
-##               word count         freq a b c d e f g h i j k l m n o p q r
-## 207290 rechallenge     1 4.511621e-08 1 0 1 0 3 0 1 1 0 0 0 2 0 1 0 0 0 1
-## 38170     modelled    17 7.669755e-07 0 0 0 2 2 0 0 0 0 0 0 2 1 0 1 0 0 0
-## 181824   proenzyme     1 4.511621e-08 0 0 0 0 2 0 0 0 0 0 0 0 1 1 1 1 0 1
-## 201652     piliers     1 4.511621e-08 0 0 0 0 1 0 0 0 2 0 0 1 0 0 0 1 0 1
-## 136803 gainsharing     1 4.511621e-08 2 0 0 0 0 0 2 1 2 0 0 0 0 2 0 0 0 1
-## 60432       bolvar     7 3.158134e-07 1 1 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 1
-## 49066      zoubida    10 4.511621e-07 1 1 0 1 0 0 0 0 1 0 0 0 0 0 1 0 0 0
-## 71972      honeyed     5 2.255810e-07 0 0 0 1 2 0 0 1 0 0 0 0 0 1 1 0 0 0
-## 3757           est   553 2.494926e-05 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
-## 124635      hejazi     2 9.023241e-08 1 0 0 0 1 0 0 1 1 1 0 0 0 0 0 0 0 0
-##        s t u v w x y z
-## 207290 0 0 0 0 0 0 0 0
-## 38170  0 0 0 0 0 0 0 0
-## 181824 0 0 0 0 0 0 1 1
-## 201652 1 0 0 0 0 0 0 0
-## 136803 1 0 0 0 0 0 0 0
-## 60432  0 0 0 1 0 0 0 0
-## 49066  0 0 1 0 0 0 0 1
-## 71972  0 0 0 0 0 0 1 0
-## 3757   1 1 0 0 0 0 0 0
-## 124635 0 0 0 0 0 0 0 1
+##                                          word count         freq a b c d e
+## 71104                                aprilbot     5 2.255810e-07 1 1 0 0 0
+## 13714                                  ressam    89 4.015342e-06 1 0 0 0 1
+## 180205                             red-legged     1 4.511621e-08 0 0 0 2 3
+## 134140                       not-terribly-big     1 4.511621e-08 0 2 0 0 1
+## 238633 our-leaders-are-all-corrupt-and-stupid     1 4.511621e-08 4 0 1 3 3
+## 149773                            periclitari     1 4.511621e-08 1 0 1 0 1
+## 149414                                 topiii     1 4.511621e-08 0 0 0 0 0
+## 67265                                       a     6 2.706972e-07 1 0 0 0 0
+## 116542                               ellebila     2 9.023241e-08 1 1 0 0 2
+## 27781                                  mascot    29 1.308370e-06 1 0 1 0 0
+##        f g h i j k l m n o p q r s t u v w x y z
+## 71104  0 0 0 1 0 0 1 0 0 1 1 0 1 0 1 0 0 0 0 0 0
+## 13714  0 0 0 0 0 0 0 1 0 0 0 0 1 2 0 0 0 0 0 0 0
+## 180205 0 2 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+## 134140 0 1 0 2 0 0 1 0 1 1 0 0 2 0 2 0 0 0 0 1 0
+## 238633 0 0 0 1 0 0 3 0 1 2 2 0 5 2 2 3 0 0 0 0 0
+## 149773 0 0 0 3 0 0 1 0 0 0 1 0 2 0 1 0 0 0 0 0 0
+## 149414 0 0 0 3 0 0 0 0 0 1 1 0 0 0 1 0 0 0 0 0 0
+## 67265  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+## 116542 0 0 0 1 0 0 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+## 27781  0 0 0 0 0 0 0 1 0 1 0 0 0 1 1 0 0 0 0 0 0
 {% endhighlight %}
 
 # Plot functions
@@ -189,6 +189,7 @@ PlotBar <- function(dat, tit, var) {
     labs(title = tit, x = "Layout", y = var, fill = "Layout",
          caption = "Source: American National Corpus second release frequency data") + 
     geom_bar(stat = 'identity', width = .6) + coord_flip() + 
+    ylim(0, 1) + 
     geom_text(aes(label=Perc(val/nchar(paste(word.sample, collapse = '')))), 
               hjust=1.2, size = 4, color = clrs$mono[1], family = 'Roboto Medium') + 
     scale_fill_manual(values = clrs$dark) +
@@ -320,16 +321,16 @@ SampleRows(hmr, 10)
 
 {% highlight text %}
 ##           word qwerty dvorak colemak qgmlwb
-## 77113      the      1      3       3      3
-## 934   deletion      2      7       7      7
-## 36593   second      2      5       5      5
-## 85302       is      1      2       2      2
-## 1572      that      2      4       4      4
-## 10951       by      0      0       0      0
-## 95525       ca      1      1       1      1
-## 54744      the      1      3       3      3
-## 45191    lymph      2      1       1      1
-## 82716       to      0      2       2      2
+## 9862        my      0      0       0      0
+## 52521       to      0      2       2      2
+## 97454       to      0      2       2      2
+## 50669      sit      1      3       3      3
+## 16778 produced      2      5       5      5
+## 13879   huh-uh      3      5       3      3
+## 17218     this      2      4       4      4
+## 47635      was      2      2       2      2
+## 16788       of      1      1       1      1
+## 56791   forced      2      3       4      4
 {% endhighlight %}
 
 When using any of the alternative layouts, more than twice as many keystrokes are executed on home row as with _Qwerty_. There is little difference between the alternative layouts, however.
@@ -341,7 +342,7 @@ PlotBar(hmr, "Letters typed on homerow", "Letters typed on homerow / total numbe
 
 ![](/img/evaluating_keyboard_layouts_with_r/unnamed-chunk-16-1.png)
 
-The density plot below illustrates the distribution of words by proportion of home row letters for each layout. In case of all layouts, there are many words that require half of keystrokees to be executed on home row. However, when using _Qwerty_ many words are also typed without using home row at all, while the design of other layouts allows typing a large share of words only on homerow. Note that _Colemak_ and _Qgmlwb_ have the same letters on homerow which is why the line for _Colemak_ is not visible here.
+The density plot below illustrates the distribution of words by proportion of home row letters for each layout. In case of all layouts, there are many words that require half of keystrokes to be executed on home row. However, when using _Qwerty_ many words are also typed without using home row at all, while the design of other layouts allows typing a large share of words only on homerow. Note that _Colemak_ and _Qgmlwb_ have the same letters on homerow which is why the line for _Colemak_ is not visible here.
 
 
 {% highlight r %}
@@ -377,24 +378,24 @@ SampleRows(alt, 10)
 
 
 {% highlight text %}
-##               word qwerty dvorak colemak qgmlwb
-## 95058     champion      3      4       5      4
-## 19755            i      0      0       0      0
-## 91513 photographer      5      9       6      5
-## 4064         other      3      3       3      3
-## 10253         well      1      2       1      2
-## 52636         into      2      2       2      2
-## 11698        split      2      4       2      4
-## 5514           the      2      1       1      1
-## 60860          and      2      1       2      1
-## 50903          you      0      0       0      0
+##            word qwerty dvorak colemak qgmlwb
+## 54299   shakers      4      2       4      2
+## 86495       man      2      2       2      2
+## 46149        to      1      1       1      1
+## 47912       the      2      1       1      1
+## 17429       way      1      1       1      1
+## 11639      were      0      3       3      3
+## 38845         a      0      0       0      0
+## 81624 important      3      5       5      5
+## 71851       yet      1      1       1      1
+## 85207        an      1      1       1      1
 {% endhighlight %}
 
 On the bar chart below, the sum of all alterations is divided by the sum of all characters. It appears that Dvorak which was designed with this feature in mind, is the most successful in this respect with _Qgmlwb_ being quite similar. When taking into account typing only single words, most of keystrokes on these layouts are followed by a press with another hand finger. This is not true for _Colemak_ or _Qwerty_. 
 
 
 {% highlight r %}
-PlotBar(alt, "Alteration between hands", "Hand alterations / total number of keystrokees")
+PlotBar(alt, "Alteration between hands", "Hand alterations / total number of keystrokes")
 {% endhighlight %}
 
 ![](/img/evaluating_keyboard_layouts_with_r/unnamed-chunk-19-1.png)
@@ -437,24 +438,24 @@ SampleRows(rol, 10)
 
 
 {% highlight text %}
-##             word qwerty dvorak colemak qgmlwb
-## 37691 regulation      3      0       3      0
-## 59524         an      0      0       0      0
-## 29022  offerings      2      1       1      0
-## 1614           a      0      0       0      0
-## 18784        and      0      1       0      0
-## 85882        the      0      1       0      1
-## 53329        the      0      1       0      1
-## 98798        god      0      0       0      0
-## 51703    uncross      2      1       1      1
-## 72370          b      0      0       0      0
+##           word qwerty dvorak colemak qgmlwb
+## 74690       to      0      0       0      0
+## 30290       'd      1      0       1      0
+## 90038      was      1      0       1      0
+## 17676     here      1      0       0      1
+## 92214      was      1      0       1      0
+## 78944       in      1      0       1      0
+## 6816        we      1      0       0      0
+## 2526       for      0      0       0      0
+## 97775       it      0      0       0      0
+## 65932 brothers      1      1       1      1
 {% endhighlight %}
 
 Inwards rolling motions seem to be most frequent when using _Qwerty_ but also _Colemak_ layout where 16-17% of keystrokes are part of such movements This is expected in case of _Colemak_ which was designed with this idea in mind. There seems to be a certain tradeoff between hand alterations and rolling motions since _Dvorak_ and _Qgmlwb_ seem to perform worse in this area.
 
 
 {% highlight r %}
-PlotBar(rol, "Inward rolling sequences", "Inward rolling sequences / total number of keystrokees")
+PlotBar(rol, "Inward rolling sequences", "Inward rolling sequences / total number of keystrokes")
 {% endhighlight %}
 
 ![](/img/evaluating_keyboard_layouts_with_r/unnamed-chunk-22-1.png)

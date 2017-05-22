@@ -3,7 +3,7 @@ title: "Evaluating keyboard layouts with R"
 description: "Popular keyboard layouts are evaluated in the context of typing in English. Various aspects of typing are considered and differences are calculated and plotted."
 ---
 
-```{r setup, include = F, eval = T}
+```{r setup, include = FALSE, eval = TRUE}
 # Settings
 knitr::opts_chunk$set(include = T, eval = T, message = F, warning = F, 
                       fig.asp = .5, fig.width = 10)
@@ -19,11 +19,11 @@ This post will evaluate differet aspects of the aforementioned keyboard layouts 
 
 Let's load necessary packages and objects. The latter includes theme and color scheme for plots and some functions for text formatting.
 
-```{r include = T, eval = T}
+```{r include = TRUE, eval = TRUE}
 # Load packages
 library('dplyr'); library('tidyr'); library('ggplot2'); library('extrafont')
 # Load objects
-load('data/rschtheme.Rda'); load('data/funs.Rda')
+load('data/objects/lil_theme.Rda'); load('data/objects/funs.Rda')
 ```
 
 To begin with, we need to imput some data. [American National Corpus data](http://www.anc.org/data/anc-second-release/) gives us the most common words and their relative frequencies in English. These frequencies are used as the basis for creating a text sample of 100 000 words which will be employed later in the analysis.
@@ -107,6 +107,7 @@ PlotBar <- function(dat, tit, var) {
     labs(title = tit, x = "Layout", y = var, fill = "Layout",
          caption = "Source: American National Corpus second release frequency data") + 
     geom_bar(stat = 'identity', width = .6) + coord_flip() + 
+    ylim(0, 1) + 
     geom_text(aes(label=Perc(val/nchar(paste(word.sample, collapse = '')))), 
               hjust=1.2, size = 4, color = clrs$mono[1], family = 'Roboto Medium') + 
     scale_fill_manual(values = clrs$dark) +

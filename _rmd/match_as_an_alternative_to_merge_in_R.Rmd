@@ -1,0 +1,58 @@
+---
+title: "Match as an alternative to merge in R"
+bibliography: '/home/jrl/text/library.bib'
+description: "While 'merge' function is the most straightforward solution to joining datasets by a common variable in R, sometimes 'match' is more intuitive."
+---
+
+```{r setup, include = FALSE, eval = TRUE}
+# Settings
+knitr::opts_chunk$set(include = T, eval = T, message = F, warning = F, 
+                      fig.asp = .5, fig.width = 10)
+# Set working directory
+knitr::opts_knit$set(root.dir = '/home/jrl/') 
+```
+
+One of the most common operations in data wrangling is joining two sets of data by a common variable. Probably the most popular method for this is the obscure `vlookup` function in Excel. The closest alternative in base R is `merge` and the dplyr package contains the join function family which is even more convenient. But there is a more simple and direct solution when only one variable needs to be added to a dataset. 
+
+Suppose we have two data frames, `df.a` and `df.b`, and we wish to get the values of `other.var` from `df.a` into `df.b` so that each `id` gets their "own" value. There are [various methods for matching](https://www.google.ee/search?q=data+join), each yielding a different result. But in my experience *left join* on a single variable is the most frequent and this is what we will explore here.
+
+``` {r}
+df.a <- data.frame(id = sample(LETTERS, 10), 
+                   some.var = rnorm(10))
+df.a
+df.b <- data.frame(id = sample(LETTERS, 20), 
+                   other.var = runif(20, 1, 100))
+df.b
+```
+
+# Left join with 'merge'
+
+When using `merge`, we specify the arguments of the function, run it and then through some *magic* a new dataset with requested columns is created. Note that we don't need to specify by which variable we wish to merge if variable names are the same.
+
+``` {r}
+df.merge <- merge(df.a, df.b, all.x = T, all.y = F)
+df.merge
+```
+
+# Left join with 'match'
+
+A more hands-on approach involves first figuring out which rows in `df.b` correspond to which rows in `df.a` according to `id`. The `match` function allows us to do just that.
+
+``` {r}
+match(df.a$id, df.b$id)
+```
+
+Now that we have the row numbers, we can simply return `other.var` in `df.b` where the matches occur. A useful side effect is that we can define the name for the new variable while matching.
+
+``` {r} 
+df.a$other.var <- df.b$other.var[match(df.a$id, df.b$id)]
+```
+
+Now let's compare the results.
+
+``` {r}
+df.merge
+df.a
+```
+
+We can see that the result is essentially the same. What `merge` has done is rearranged the rows which is something we might not want to happen. So I encourage the use of `match` when possible since it allows the addition of a single column without running a function over entire data sets.
