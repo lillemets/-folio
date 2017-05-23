@@ -1,6 +1,5 @@
 ---
 title: "Match as an alternative to merge in R"
-bibliography: '/home/jrl/text/library.bib'
 description: "While 'merge' function is the most straightforward solution to joining datasets by a common variable in R, sometimes 'match' is more intuitive."
 ---
 
@@ -12,9 +11,9 @@ knitr::opts_chunk$set(include = T, eval = T, message = F, warning = F,
 knitr::opts_knit$set(root.dir = '/home/jrl/') 
 ```
 
-One of the most common operations in data wrangling is joining two sets of data by a common variable. Probably the most popular method for this is the obscure `vlookup` function in Excel. The closest alternative in base R is `merge` and the dplyr package contains the join function family which is even more convenient. But there is a more simple and direct solution when only one variable needs to be added to a dataset. 
+One of the most common operations in data wrangling is joining two sets of data by a common variable. Probably the most popular method for this is the obscure `vlookup` function in Excel (simply because it's the most widely used software for data manipulaton). The closest alternative in base R is `merge` and the dplyr package contains the join function family which is even more convenient. But there is a more simple and direct solution when only one variable needs to be added to a dataset. 
 
-Suppose we have two data frames, `df.a` and `df.b`, and we wish to get the values of `other.var` from `df.a` into `df.b` so that each `id` gets their "own" value. There are [various methods for matching](https://www.google.ee/search?q=data+join), each yielding a different result. But in my experience *left join* on a single variable is the most frequent and this is what we will explore here.
+Suppose we have two data frames, `df.a` and `df.b`, and we wish to get the values of `other.var` from `df.b` into `df.a` so that each `id` gets their "own" value. There are [various methods for joining](https://www.google.ee/search?q=data+join), each yielding a different result. But in my experience *left join* on a single variable is the most frequent and this is what we will explore here.
 
 ``` {r}
 df.a <- data.frame(id = sample(LETTERS, 10), 
@@ -36,7 +35,7 @@ df.merge
 
 # Left join with 'match'
 
-A more hands-on approach involves first figuring out which rows in `df.b` correspond to which rows in `df.a` according to `id`. The `match` function allows us to do just that.
+A more hands-on approach involves first figuring out which rows in `df.a` correspond to which rows in `df.b` according to `id`. The `match` function allows us to do just that.
 
 ``` {r}
 match(df.a$id, df.b$id)

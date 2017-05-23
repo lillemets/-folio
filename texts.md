@@ -1,7 +1,7 @@
 ---
 layout: page
 title: texts
-description: Here are some essays and other papers on various political issues. These were written during my studies in <a target="_blank" href="http://skytte.ut.ee/en">Tartu</a> and <a target="_blank" href="https://www.polver.uni-konstanz.de/en/">Konstanz</a>. Most are in Estonian.
+description: Here are some essays and other papers on various political issues. Most of these were written during my studies in <a target="_blank" href="http://skytte.ut.ee/en">Tartu</a> and <a target="_blank" href="https://www.polver.uni-konstanz.de/en/">Konstanz</a>. Most are in Estonian.
 ---
 
 <ul class="post-list">
