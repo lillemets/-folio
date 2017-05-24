@@ -1,7 +1,6 @@
 ---
 layout: page
 title: projects
-permalink: /projects.html
 description: These are some projects I've been involved in regarding my work. There is currently nothing here but short overviews of my projects will be added sometime in the future.
 ---
 

@@ -27,10 +27,10 @@ paginate_path: "/blog/page:num/"
 collections:
   projects:
     output: true
-    permalink: /projects/:path.html
+    permalink: :title.html
   texts:
     output: true
-    permalink: /texts/:path.html
+    permalink: :title.html
 
 # defaults
 defaults:
