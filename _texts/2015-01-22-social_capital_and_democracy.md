@@ -211,7 +211,7 @@ Standardized beta coefficients
 
 The linear relationship observable in table 5 is better illustrated on graph 1. While most countries seem to have a low mean value of individual democracy as well as social capital, those with higher levels seem to follow a linear relationship, albeit with relatively high scatter. With some exceptions, it is even possible to identify two distinct regional or cultural patterns as there seem to be countries with (1) high level of individual democracy and medium to high level of social capital (established western democracies) and (2) high level of social capital, but medium level of individual democracy (sub-Saharan Africa and Southeastern Asia). In sum, there is enough evidence to confirm the fourth hypothesis. 
 
-![Graph 1. Individual democracy plotted against social capital. India is excluded from the graph.]({{ site.url }}/img/2015-01-22-relationship.png)
+![Graph 1. Individual democracy plotted against social capital. India is excluded from the graph.](/img/2015-01-22-relationship.png)
 
 # Conclusions
 
