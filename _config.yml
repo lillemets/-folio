@@ -4,7 +4,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Jüri Lillemets
 timezone: Europe/Tallinn 
 url: www.lillemets.ee 
-baseurl: 
+baseurl: site.url
 
 # author info
 email: jyri.lillemets@emu.ee
