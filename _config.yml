@@ -4,7 +4,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Jüri Lillemets
 timezone: Europe/Tallinn 
 url: www.lillemets.ee 
-baseurl: ""
+baseurl: 
 
 # author info
 email: jyri.lillemets@emu.ee
@@ -13,8 +13,8 @@ disqus_shortname: 'lillemets'
 
 # build settings
 markdown: kramdown
-highlighter: pygments
-destination: /home/jrl/drop/Dropbox/Apps/Pancake.io/lillemets
+highlighter: rouge
+destination: 
 permalink: none
 
 # addons
