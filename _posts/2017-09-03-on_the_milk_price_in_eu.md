@@ -22,7 +22,7 @@ Returning to the 40-year period, milk price in individual countries does not see
 
 - During late 1970's and for a decade starting from 1983 milk price was prominently higher in Italy in comparison to other member states. 
 
-- Milk price in the Eastern European countries that joined the EU in 2004 was initially much lower than elsewhere in the EU but in most cases converged during the following few years. Only in Latvia and Lithuania it was the= global food price crisis in 2007 that eventually drove milk prices to the EU level.
+- Milk price in the Eastern European countries that joined the EU in 2004 was initially much lower than elsewhere in the EU but in most cases converged during the following few years. Only in Latvia and Lithuania it was the global food price crisis in 2007 that eventually drove milk prices to the EU level.
 
 - From 2007 onwards milk price has been considerably higher in Cyprus and Malta. This may be due to the short expiraton time of milk which complicates its transportation. As a result, price of milk is less responsive to trends in EU market where physical boundaries inhibit transportation.
 

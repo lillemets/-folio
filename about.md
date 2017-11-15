@@ -13,7 +13,7 @@ I work as an analyst at [Estonian University of Life Sciences](http://ms.emu.ee/
 Witten in [markdown](https://en.wikipedia.org/wiki/Markdown) markup language.  
 Built using [Jekyll](http://jekyllrb.com/) static site generator.  
 Based on the beautiful [Folio](https://github.com/bogoli/-folio) theme.  
-Hosted on [Pancake.io](https://www.pancake.io/).
+Hosted on [Github](https://github.com/lillemets).
 
 <br/>
 <hr/>
