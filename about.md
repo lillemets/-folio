@@ -6,7 +6,7 @@ permalink: /about.html
 
 <img class="col one right" src="/img/profile.jpg">
 
-I work as an analyst at [Estonian University of Life Sciences](http://ms.emu.ee/et/uldinfo/struktuur2/maamajanduse-uuringud-ja-analuus/) and am occupied with researching pretty much everything related to rural life in Estonia. I have an [online resume](http://jyri.lillemets.ee). It's in Estonian.
+I work as an analyst at [Estonian University of Life Sciences](http://ms.emu.ee/et/uldinfo/struktuur2/maamajanduse-uuringud-ja-analuus/) and am occupied with researching pretty much everything related to rural life in Estonia.
 
 ### About this site
 

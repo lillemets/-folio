@@ -1,7 +1,9 @@
 <footer class="site-footer">
 
+    {% if page.rmd %}
     <div class="wrapper" align=center>
-  	&#169; 2017 Jüri Lillemets
+  	This post was originally written in <i>rmarkdown</i> and the code can be found <a href="{{ page.rmd }}">here</a>.
     </div>
+    {% endif %}
 
 </footer>
