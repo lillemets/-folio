@@ -1,6 +1,7 @@
 ---
 title: "Propensity score matching with R"
 description: "A walkthrough on how to carry out PSM analysis in R using base R functions."
+rmd: https://github.com/lillemets/data/blob/master/projects/propensity_score_matching_with_r/propensity_score_matching_with_r.Rmd
 ---
 
 

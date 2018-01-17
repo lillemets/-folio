@@ -12,11 +12,17 @@ layout: default
     {{ content }}
   </article>
 
+
+    {% if page.rmd %}
+    <br>
+    <div align=center>
+  	<h5>This post was originally written in <i>rmarkdown</i> and the code can be found <a href="{{ page.rmd }}">here</a>.</h5>
+    </div>
+    {% endif %}
+
     <br>
     <h1>Discussion</h1>
     
     {% include disqus.html %}
-
-    {% include footer.html %}
 
 </div>
