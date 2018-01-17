@@ -17,7 +17,7 @@ destination:
 permalink: none
 
 # addons
-gems:
+plugins:
     - jekyll-paginate
 paginate: 10
 paginate_path: "/blog/page:num/"
