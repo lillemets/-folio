@@ -417,7 +417,7 @@ t.test(change.treated, change.pseudo)
 ##  2910.254  3067.741
 {% endhighlight %}
 
-The p-values of the two t-tests also indicate that previously we could have attributed a substantial increase in mean earnings to treatment. After implementing PSM we were unable to demonstrate the mean effect of treatment to be statistically significant and thus conclude that treatment had no impact on earnings.
+The p-values of the two t-tests also indicate that previously we could have attributed a substantial increase in mean earnings to treatment. After implementing PSM we were unable to demonstrate the mean effect of treatment to be statistically significant and thus we conclude that treatment had no impact on earnings.
 
 # References
 

@@ -67,13 +67,12 @@ display: line;
     }
     h2{
         font-size:25px;
+    }
     h3{
     }
     h4{
     }
-    }
     h5{
-        font-size:10px;
     }
     h6{
     }
@@ -184,6 +183,9 @@ margin-bottom: 0px;
 .post-link {
 display: block;
 font-size: 42px;
+}
+.post-coderef {
+font-size: 14px
 }
 
 /** Poem formatting ********************************************/
