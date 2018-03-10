@@ -258,7 +258,7 @@ plot(lalonde$propensity, jitter(lalonde$treated),
      xlab = "Propensity score", ylab = "Treatment status")
 {% endhighlight %}
 
-![](img/propensity_score_matching_with_rcontrol-1.png)
+![](img/propensity_score_matching_with_r/control-1.png)
 
 As anticipated, the probability of treated observations to be treated is substantially higher since a great majority of non-treated individuals have a propensity score close to 0. This is an indication that the groups are unbalanced and it is necessary to create a pseudo control group for a more fair comparison.
 
@@ -293,7 +293,7 @@ with(lalonde[lalonde$treated == 1 | lalonde$control, ],
                   xlab = "Propensity score", ylab = "Treatment status"))
 {% endhighlight %}
 
-![](img/propensity_score_matching_with_rpseudo_control-1.png)
+![](img/propensity_score_matching_with_r/pseudo_control-1.png)
 
 # Balancing
 
