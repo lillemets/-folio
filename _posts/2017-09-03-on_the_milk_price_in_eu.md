@@ -2,7 +2,7 @@
 title: "On the milk price in EU"
 date: 2017-09-02
 description: Milk prices in EU plunged after expiration of milk quotas in 2015. Some trends of milk prices are explored and the effects of the end of quotas are presented. 
-rmd: https://github.com/lillemets/data/blob/master/projects/on_the_milk_price_in_eu/on_the_milk_price_in_eu.Rmd
+rmd: https://raw.githubusercontent.com/lillemets/data/master/projects/on_the_milk_price_in_eu/on_the_milk_price_in_eu.Rmd
 ---
 
 

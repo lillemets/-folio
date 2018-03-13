@@ -1,7 +1,7 @@
 ---
 title: "Evaluating keyboard layouts with R"
 description: "Popular keyboard layouts are evaluated in the context of typing in English. Various aspects of typing are considered and differences are calculated and plotted."
-rmd: https://github.com/lillemets/data/blob/master/projects/evaluating_keyboard_layouts_with_r/evaluating_keyboard_layouts_with_r.Rmd
+rmd: https://raw.githubusercontent.com/lillemets/data/master/projects/evaluating_keyboard_layouts_with_r/evaluating_keyboard_layouts_with_r.Rmd
 ---
 
 

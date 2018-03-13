@@ -1,7 +1,7 @@
 ---
 title: "Plotting the fit of regression models in R"
 description: "Visualizing model fit helps better understand how well model fits data but also illustrates the relationship between variables. An example is given on how to do this in R."
-rmd: https://github.com/lillemets/data/blob/master/projects/plotting_the_fit_of_regression_models_in_r.Rmd
+rmd: https://raw.githubusercontent.com/lillemets/data/master/projects/plotting_the_fit_of_regression_models_in_r.Rmd
 ---
 
 

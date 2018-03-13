@@ -1,7 +1,7 @@
 ---
 title: "Match as an alternative to merge in R"
 description: "While 'merge' function is the most straightforward solution to joining datasets by a common variable in R, sometimes 'match' is more intuitive."
-rmd: https://github.com/lillemets/data/blob/master/projects/match_as_an_alternative_to_merge_in_R.Rmd
+rmd: https://raw.githubusercontent.com/lillemets/data/master/projects/match_as_an_alternative_to_merge_in_R.Rmd
 ---
 
 
