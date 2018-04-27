@@ -12,13 +12,13 @@ One of the first principles that I ever learned about creating mathematical mode
 
 A further explanation in the original text is that absurd models are a common pitfall in social sciences and physicists would refine models until they conform to even extreme cases. 
 
-I've always taken that principle literally. But models often do predict absurdities. This is commonplace with linear regeression models and even in academic reseach. Simple linear regression models often predict a theoreticaly impossible situation where response is 0 while the value of predictor is not. Nevertheless, coercing the intercept to 0 (regression through the origin) is usually strongly argued against. So there is a conflict between what theory and methodology suggests. How is this possible? I argue that the problem stems from the fact that we too often assume relationships to be linear (even with untransformed and unnormalized data), while this is almost never the case outside hard sciences. 
+I've always taken that principle literally. But models often do predict absurdities. This is commonplace with linear regeression models and even in academic reseach. Simple linear regression models often predict a theoreticaly impossible situation where response is 0 while the value of predictor is not. Nevertheless, coercing the intercept to 0 (regression through the origin) is usually strongly argued against. So there is a conflict between what theory and methodology suggest. How is this possible? I argue that the problem stems from the fact that we too often assume relationships to be linear (even with untransformed and unnormalized data), while this is almost never the case outside hard sciences. 
 
 I tend to think visually, so this is how I'll try to explain this dilemma. First off, because we'll need to repeat the visualization of the same data for different models, let's create a few functions for the sake of concision.
 
 
 {% highlight r %}
-# Define a function to plot points from women datast
+# Define a function to plot points from women dataset
 plotData <- function() {
   plot(c(0,75), c(0,200), type = 'n', xlab = "Height (in)", ylab = "Weight (lb)")
   points(women)
@@ -87,7 +87,7 @@ plotData(); addFit()
 
 ![](img/are_nonsensical_models_useful/unnamed-chunk-3-1.png)
 
-While theoretically accurate regarding intercept, a linear fit witout intercept does not fit data very well. To solve this, let's allow a curvature in the relationship by fitting a polynomial (the model will still be linear in terms of parameters). 
+While theoretically accurate regarding intercept, a linear fit without intercept does not fit data very well. To solve this, let's allow a curvature in the relationship by fitting a polynomial (the model will still be linear in terms of parameters). 
 
 
 {% highlight r %}
@@ -172,7 +172,7 @@ plotData(); addFit()
 
 ![](img/are_nonsensical_models_useful/unnamed-chunk-6-1.png)
 
-The model could further be improved not to allow weights and heights to be below 0. But when we only aim for a model that has an intercept of 0 (i.e. no intercept) and fits available data, the optimal formula would be this:
+The model could further be improved not to allow weights and heights below 0. But when we only aim for a model that has an intercept of 0 (i.e. no intercept) and fits available data, the optimal formula would be this:
 
 Weight = 4.8487 * height + -0.1058 * height^2 + 0.001 * height^3
 
@@ -181,5 +181,7 @@ It should now be obvious where the problem originates from. The true relationshi
 As demonstrated, we can correct an invalid intercept by fitting a curve instead of a straight line. But was it worth it? I don't think so. The first and simplest model already had an excellent fit to data so we didn't gain much in terms of explaining the relationship. Also, the concept of simple linear regression is fairly simple but the calculation of 3rd degree polynomials is not so much.
 
 Coming back to the opening idea, I would say that models can predict absurdities but only outside real, observed values. 
+
+# References
 
 [^Taagepera2008]: Taagepera, Rein (2008). _Making models more scientific: the need for predictive models_. Oxford University Press. 62.
