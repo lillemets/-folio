@@ -6,7 +6,7 @@ permalink: /about.html
 
 <img class="col one right" src="/img/profile.jpg">
 
-I work as an analyst at [Estonian University of Life Sciences](http://ms.emu.ee/et/uldinfo/struktuur2/maamajanduse-uuringud-ja-analuus/) and am occupied with researching pretty much everything related to rural life in Estonia.
+I work as an analyst at [Estonian University of Life Sciences](http://ms.emu.ee/en/) and am occupied with researching pretty much everything related to rural life in Estonia. I'm also a PhD student at the university, exploring the Common Agricultural Policy and its impact on the development of rural areas.
 
 ### About this site
 
