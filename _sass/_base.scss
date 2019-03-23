@@ -15,7 +15,7 @@ $base-font-family:              "Roboto Condensed", sans-serif;
 $base-font-size:                20px;
 $small-font-size:               $base-font-size * 0.875;
 $base-line-height:              1.6em;
-$base-font-weight:              300;
+$base-font-weight:              400;
 $horizontal-spacing-unit:       50px;
 $vertical-spacing-unit:         40px;
 $nav-height:                    56px;
@@ -62,8 +62,8 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-strong {
-    font-weight: 400;
+strong, b {
+    font-weight: 700;
 }
 
 
