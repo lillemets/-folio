@@ -24,20 +24,12 @@ paginate_path: "/blog/page:num/"
 
 # menu
 collections:
-  projects:
-    output: true
-    permalink: :title.html
   texts:
     output: true
     permalink: :title.html
 
 # defaults
 defaults:
-  -
-    scope:
-      type:         "projects"
-    values:
-      layout:       "post"
   -
     scope:
       type:         "texts"

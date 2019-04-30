@@ -24,6 +24,7 @@ Hosted on [Github](https://github.com/lillemets).
 	<a href="mailto:jyri.lillemets@emu.ee"><i class="fa fa-envelope-square"></i></a>
 	<a href="https://github.com/lillemets" target="_blank"><i class="fa fa-github-square"></i></a>
 	<a href="https://reddit.com/u/lillemets" target="_blank"><i class="fa fa-reddit-square"></i></a>
+	<a href="https://twitter.com/jrilil" target="_blank"><i class="fa fa-twitter-square"></i></a>
 	<a href="https://facebook.com/lillemets" target="_blank"><i class="fa fa-facebook-square"></i></a>
 	<a href="https://flickr.com/lillemets" target="_blank"><i class="fa fa-flickr"></i></a>
 </span>
