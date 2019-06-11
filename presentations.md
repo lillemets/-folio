@@ -12,7 +12,7 @@ description: Here are some of my presentations. Presentations were written using
 </li>
 
 <li>
-<h2><a class="text-title" target="_blank" href="http://www.lillemets.ee/180910_budapest/presentation#/">Explaining the spatial distribution of CAP payments. A point pattern analysis approach.</a></h2>
+<h2><a class="text-title" target="_blank" href="http://www.lillemets.ee/18_budapest/presentation#/">Explaining the spatial distribution of CAP payments. A point pattern analysis approach.</a></h2>
 <p class="post-meta">{{ "2018-09-10" | date: '%B %-d, %Y' }}</p>
 <a class="post-meta">Transition in Agriculture – Agricultural Economics in Transition. Budapest, Hungary.</a>
 </li>
@@ -21,5 +21,13 @@ description: Here are some of my presentations. Presentations were written using
 <h2><a class="text-title" target="_blank" href="/img/coventryposter.pdf">Explaining the regional distribution of the Common Agricultural Policy rural development subsidies</a></h2>
 <p class="post-meta">{{ "2019-04-15" | date: '%B %-d, %Y' }}</p>
 <a class="post-meta" href="https://www.aes.ac.uk/page.asp?ID=3">Agricultural Economics Society Annual Conference 2019. Coventry, UK.</a>
+</li>
+</ul>
+
+<li>
+<h2><a class="text-title" target="_blank" href="http://www.lillemets.ee/19_uppsala/slides/slides#">Rural development in the Common Agricultural Policy: Correlations at regional level
+</a></h2>
+<p class="post-meta">{{ "2019-06-12" | date: '%B %-d, %Y' }}</p>
+<a class="post-meta" href="https://www.slu.se/en/departments/economics/research/8th-eaae-phd-workshop">8th PhD workshop of the EAAE. Uppsala, Sweden.</a>
 </li>
 </ul>
