@@ -2,6 +2,8 @@
 title: "Propensity score matching with R"
 description: "A walkthrough on how to carry out PSM analysis in R using base R functions."
 rmd: https://raw.githubusercontent.com/lillemets/data/master/projects/propensity_score_matching_with_r/propensity_score_matching_with_r.Rmd
+editor_options: 
+  chunk_output_type: console
 ---
 
 
@@ -72,7 +74,7 @@ by(lalonde, lalonde$treated, colMeans)
 ## 1.683502e-01 7.306397e-01 3.066098e+03 5.976352e+03
 {% endhighlight %}
 
-It is evident that our initial control group is unbalanced since the distribution of the characteristics of individuals is very different. The mean change in earnings for treated individuals between 1975 and 1978 is 2910.253846. For others it is 1195.8562968. When adopting a "naive" approach we would assume that treatment increased mean earnings by the difference between the two values, i.e. 1714.3975492. As treated individuals might have had a higher increase even without treatment, we would thus overestimate the effect of treatment by considering all of the individuals. It is thus necessary to create a balanced pseudo control group in order to simulate the counterfactual situation.
+It is evident that our initial control group is unbalanced since the distribution of the characteristics of individuals is very different. The mean change in earnings for treated individuals between 1975 and 1978 is 2910. For others it is 1196. When adopting a "naive" approach we would assume that treatment increased mean earnings by the difference between the two values, i.e. 1714. As treated individuals might have had a higher increase even without treatment, we would thus overestimate the effect of treatment by considering all of the individuals. It is thus necessary to create a balanced pseudo control group in order to simulate the counterfactual situation.
 
 # Building propensity score model
 
@@ -194,7 +196,7 @@ table(prop.model$fitted.values > mean(prop.model$fitted.values),
 ##     TRUE   1683   264
 {% endhighlight %}
 
-The classification table indicates that the proportion of correctly classified treated observations is 0.8946528.
+The classification table indicates that the proportion of correctly classified treated observations is 1.
 
 We also calculate a few other statistics that help us evaluate logistic regression model.
 
@@ -304,9 +306,10 @@ In order to achieve a meaningful comparison of treatment and control group it is
 # Set confounding variables from propensity model
 confounding <- names(coefficients(prop.model))[-1]
 # Generate data frame with mean values of confounding variables by group
-balance <- data.frame(control = sapply(lalonde[!lalonde$treated, confounding], mean), 
-                      treated = sapply(lalonde[lalonde$treated, confounding], mean), 
+balance <- data.frame(control = sapply(lalonde[lalonde$treated == 0, confounding], mean),
+                      treated = sapply(lalonde[lalonde$treated == 1, confounding], mean),
                       pseudo.control = sapply(lalonde[lalonde$control, confounding], mean))
+
 # Format and print the comparison
 format(balance, digits = 2, scientific = F)
 {% endhighlight %}
@@ -314,16 +317,16 @@ format(balance, digits = 2, scientific = F)
 
 
 {% highlight text %}
-##            control treated pseudo.control
-## age         33.225      37          27.69
-## black        0.074       1           0.73
-## hispanic     0.072       0           0.11
-## married      0.712       1           0.23
-## nodegree     0.296       1           0.66
-## re75     13650.803       0        3608.61
+##            control  treated pseudo.control
+## age         33.225   24.626          27.69
+## black        0.074    0.801           0.73
+## hispanic     0.072    0.094           0.11
+## married      0.712    0.168           0.23
+## nodegree     0.296    0.731           0.66
+## re75     13650.803 3066.098        3608.61
 {% endhighlight %}
 
-We can see that when deciding by the mean values for several variables the balance has actually gotten worse. We might want to go back and adjust the propensity model or matching algorithm but here we are just providing an example. It is important to note that the confounding effect may be more significant for some variables so it is not always necessary to have the groups balanced across all of them.
+We can see that when deciding by the mean values for several variables the balance has become better. At this point we might want to go back and adjust the propensity model or matching algorithm but here we are just providing an example. It is important to note that the confounding effect may be more significant for some variables so it is not always necessary to have the groups balanced across all of them.
 
 # Estimating the impact of treatment using control group
 
@@ -370,7 +373,7 @@ mean(change.pseudo)
 ## [1] 3067.741
 {% endhighlight %}
 
-As previously explained, if we considered the original control group to reflect the counterfactual situation, we could claim that earnings increased by 1714.3975492 due to treatment. That seems like an overestimation. When we instead use the mean change in earnings of pseudo control group, we conclude that earnings changed by -157.486931. So treatment actually had a slight negative effect on earnings according to means of changes. These results might be better illustrated by t-tests.
+As previously explained, if we considered the original control group to reflect the counterfactual situation, we could claim that earnings increased by 1714 due to treatment. That seems like an overestimation. When we instead use the mean change in earnings of pseudo control group, we conclude that earnings changed by -157. So treatment actually had a slight negative effect on earnings according to means of changes. These results might be better illustrated by t-tests.
 
 
 {% highlight r %}
