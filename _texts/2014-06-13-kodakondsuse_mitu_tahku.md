@@ -31,7 +31,7 @@ See tõsiasi kehtib ka kodakondsuse kui nähtuse puhul, kuna üleilmastumine on 
 Kodakondsuse mõtestamisel on mitmed autorid loonud erinevaid, ent kohati ka kattuvaid liigitusi. Nagu tabelist 1 selgub, siis üldiselt võib need liigitused teatud mööndustega jaotada kolme olulisima tunnuse alusel ja poliitilises teoorias on sobilik erinevad kategooriad paigutada vasak-parem skaalale. Parempoolsus on siinkohal seotud selliste ideedega nagu vabadused, välistamine ja rahvus. Vasakpoolsus lähtub aga osalusest, kaasamisest ja kosmopoliitsusest. Kuna vasak-parem skaala ei ole ideaalne kõigi arusaamiste kategoriseerimiseks, siis võib ka antud tabelist leida näiteks vabariikliku kodakondsuse hoopis vasakult, kuna see on suunatud rohkem poliitilisele osalusele kui vabadustele. Ühest küljest vasak seotud kõrgema osalusega normatiivselt, ent samas võib ka väita, et just parempoolne liberalism pakub rohkem võimalusi osaluseks.
 
 ![Tabel 1. Erinevate kodakondsuse liigituste tinglik paigutamine vasak-parem skaalale. Kursiivis on tähistatud parem-vasak skaala suhtes problemaatilised elemendid. * Kuigi Delanty ja Turneri arvates oli võimalik neid elemente mitmel viisil kombineerida, siis käesolevas raamistikus saab neid ka konkreetsemalt üksteisega siduda.
-](/img/2014-06-03-liigitus.png)
+](img/2014-06-03-liigitus.png)
 
 
 Osalus on seotud peamiselt küsimusega, mil määral kodanikud riigivalitsemises osalevad ja teisi kodakondsuse poolt pakutavaid hüvesid kasutavad. Kõige asjakohasem on siin ehk vastandus aktiivse ja passiivse kodakondsuse vahel, mis on saavutatud vastavalt pakkumisele ülalt või nõudmistele altpoolt (Turner 1990:200). Sellise jaotusega on kooskõlas ka Angus Stewarti kodakondsuse jaotus riiklikuks ja demokraatlikuks (Stewart 1995:63-5). Neist esimene on pelgalt formaalne ja juriidiline staatus, samas kui demokraatlik variant viitab aktiivsele osalusele poliitilises kogukonnas. Samamoodi võib mõista ka Gerard Delanty (1997:292) käsitlust formaalsest ja sisulisest, mille puhul esimene seisneb vaid kodaniku õigustes ja kohustustes, viimane tähendab aga aktiivsemat osalemist ja kogukonnaga identifitseerimist. Nende kahe poolega on mõneti seotud ka kodakondsuse jaotamine aktiivsuseks avalikus sfääris ja väiksemat osalust tähendav erasfäär. 
@@ -43,7 +43,7 @@ Mõned kodakondsuse käsitlused lähtuvad ka konkreetsemalt selle riiklikust ja 
 Erinevate kodakondsuse liigituste puhul võib leida olulisi kattuvusi ja tabel 2 ilmestab täpsemalt Delanty ja Turneri kategooriate selgelt ühildatavust.
 
 ![Tabel 2. Kahe kodakondsuse maatriksi süntees, Delanty (1997) ja Turneri (1990) elemendid on tähistatud vastavalt rasvases ja tavalises kirjaviisis.  * Kuigi Turneri (1990:200) maatriksis esinevad need kaks elementi teistpidi, viitab nende täpsem kirjeldus, et tegemist on ilmselt veaga. 
-](/img/2014-06-03-maatriks.png)
+](img/2014-06-03-maatriks.png)
 
 
 # Kodakondsus ja vähemused

@@ -18,7 +18,7 @@ description: Here are some of my presentations. Presentations were written using
 </li>
 
 <li>
-<h2><a class="text-title" target="_blank" href="/img/coventryposter.pdf">Explaining the regional distribution of the Common Agricultural Policy rural development subsidies</a></h2>
+<h2><a class="text-title" target="_blank" href="img/coventryposter.pdf">Explaining the regional distribution of the Common Agricultural Policy rural development subsidies</a></h2>
 <p class="post-meta">{{ "2019-04-15" | date: '%B %-d, %Y' }}</p>
 <a class="post-meta" href="https://www.aes.ac.uk/page.asp?ID=3">Agricultural Economics Society Annual Conference 2019. Coventry, UK.</a>
 </li>
